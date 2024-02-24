@@ -2,10 +2,58 @@
 <html>
 <head>
     <title>Link Opener</title>
+    <style>
+        body {
+            background-color: #fffbe7; /* Light yellow background */
+            font-family: 'Arial', sans-serif; /* Use a simple and clean font */
+            margin: 0;
+            padding: 20px; /* Add some padding around the content */
+            width: 400px; /* Set a fixed width for the popup */
+        }
+        #linkText {
+            width: 100%; /* Take up the full width of the body */
+            height: 150px; /* Fixed height for the textarea */
+            margin-bottom: 10px; /* Add some space below the textarea */
+            padding: 10px; /* Make it more comfortable to type in */
+            border: 1px solid #ccc; /* A subtle border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Inner shadow for some depth */
+            font-size: 14px; /* Slightly larger font for legibility */
+            box-sizing: border-box; /* Include padding in total width and height */
+            resize: vertical; /* Allow vertical resizing */
+        }
+        #linkText::placeholder {
+            color: #aaa; /* Light color for placeholder text */
+        }
+        #openLinks {
+            background-color: #007bff; /* Bootstrap's primary blue */
+            color: white; /* White text for contrast */
+            padding: 10px 20px; /* Spacious padding for the button */
+            border: none; /* No border for a modern look */
+            border-radius: 4px; /* Less rounded corners */
+            cursor: pointer; /* Change mouse cursor to indicate clickability */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Drop shadow for depth */
+            font-weight: bold; /* Bold text for the button */
+            transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+            float: right; /* Align the button to the right */
+            margin-right: 0; /* Align the button to the right edge */
+        }
+        #openLinks:hover {
+            background-color: #0056b3; /* A darker shade of blue for hover */
+        }
+        /* Clear float */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
 </head>
 <body>
-    <textarea id="linkText" rows="10" cols="30"></textarea>
-    <button id="openLinks">Open Links</button>
+    <div class="clearfix">
+        <textarea id="linkText" placeholder="Paste text here..."></textarea>
+        <button id="openLinks">Open Links</button>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
