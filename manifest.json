@@ -2,10 +2,15 @@
     "manifest_version": 3,
     "name": "Bulk Link Opener",
     "version": "1.0",
-    "description": "Open multiple links pasted in a text area",
+    "description": "Open multiple links pa128sted in a text area",
     "permissions": ["activeTab"],
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      }
     },
     "background": {
       "service_worker": "background.js"
